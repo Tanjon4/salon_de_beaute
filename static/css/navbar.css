@@ -1,0 +1,258 @@
+/* Couleurs sophistiquées pour salon de beauté luxueux */
+:root {
+    --primary-color: #D8A7A1;
+    --secondary-color: #F5E6E8;
+    --accent-color: #E8C4C4;
+    --dark-color: #4A3A3A;
+    --light-color: #FFF9FB;
+    --text-color: #5A4A4A;
+    --gold-accent: #C4A482;
+}
+
+/* Import de polices luxueuses */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Navbar élégant et professionnel */
+.bg-beauty {
+    background-color: var(--light-color);
+    box-shadow: 0 4px 30px rgba(218, 168, 161, 0.08);
+    font-family: 'Montserrat', sans-serif;
+    padding: 18px 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.navbar-brand img {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    height: 50px !important;
+    filter: drop-shadow(0 2px 6px rgba(216, 167, 161, 0.15));
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Liens de navigation sophistiqués */
+.nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    position: relative;
+    margin: 0 10px;
+    padding: 12px 24px !important;
+    border-radius: 30px;
+    transition: all 0.4s ease-out;
+    font-size: 0.95rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(216, 167, 161, 0.1);
+    transform: translateY(-3px);
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover::before {
+    width: 70%;
+}
+
+.nav-link.active {
+    color: var(--gold-accent) !important;
+    font-weight: 600;
+}
+
+/* Boutons de luxe */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 12px 28px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(216, 167, 161, 0.25);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-primary:hover {
+    background-color: #C99791;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(216, 167, 161, 0.35);
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    background-color: transparent;
+    font-weight: 500;
+    padding: 11px 27px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 20px rgba(216, 167, 161, 0.3);
+    border-color: var(--primary-color);
+}
+
+/* Avatar et dropdown élégant */
+.avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(216, 167, 161, 0.3);
+}
+
+.dropdown-toggle:hover .avatar-placeholder {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px rgba(216, 167, 161, 0.2);
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    padding: 8px 0;
+    box-shadow: 0 10px 35px rgba(216, 167, 161, 0.15);
+    animation: fadeIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(216, 167, 161, 0.1);
+}
+
+.dropdown-item {
+    padding: 10px 24px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding-left: 28px;
+}
+
+.dropdown-divider {
+    border-color: rgba(216, 167, 161, 0.15);
+}
+
+/* Animation subtile */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design élégant */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        padding: 20px 0;
+        background-color: var(--light-color);
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 15px 30px rgba(216, 167, 161, 0.1);
+        margin-top: 15px;
+    }
+    
+    .nav-link {
+        margin: 8px 0;
+        padding: 14px 24px !important;
+        text-align: center;
+    }
+    
+    .nav-link::before {
+        display: none;
+    }
+    
+    .d-flex {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(216, 167, 161, 0.15);
+        flex-direction: column;
+        align-items: center !important;
+    }
+    
+    .btn {
+        margin-bottom: 12px;
+        width: 80%;
+        max-width: 220px;
+    }
+    
+    .dropdown-menu {
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0 5px 20px rgba(216, 167, 161, 0.1);
+    }
+}
+
+/* Effet de scroll sophistiqué */
+.navbar-scrolled {
+    padding: 12px 0;
+    background-color: rgba(255, 249, 251, 0.96) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 25px rgba(216, 167, 161, 0.12);
+}
+
+/* Ajout d'une micro-interaction pour le logo */
+.navbar-brand {
+    position: relative;
+}
+
+.navbar-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold-accent);
+    transition: width 0.4s ease;
+}
+
+.navbar-brand:hover::after {
+    width: 100%;
+}
