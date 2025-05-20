@@ -37,3 +37,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/* Animation register.html */
+    // Toggle pour afficher/masquer le mot de passe
+document.getElementById('togglePassword').addEventListener('click', function() {
+    const password = document.getElementById('password');
+    const icon = this.querySelector('i');
+    if (password.type === 'password') {
+        password.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        password.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+});
+
+/* Animation login.js */
+// Toggle pour afficher/masquer le mot de passe
+document.getElementById('togglePassword').addEventListener('click', function() {
+    const password = document.getElementById('password');
+    const icon = this;
+    if (password.type === 'password') {
+        password.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        password.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+});
+
+// Animation au chargement
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.form-control');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.querySelector('.form-label').style.color = 'var(--primary-color)';
+        });
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentElement.querySelector('.form-label').style.color = 'var(--text-color)';
+            }
+        });
+    });
+});

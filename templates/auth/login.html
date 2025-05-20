@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<!-- Contenu principal -->
+<main class="flex-grow-1 d-flex align-items-center">
+    <div class="container py-5">
+        <div class="auth-container">
+            <div class="auth-header">
+                <img src="logo-saloon.png" alt="Logo" class="logo">
+                <h2>Connexion à votre espace</h2>
+                <p>Accédez à votre compte pour gérer vos rendez-vous et avantages</p>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse email</label>
+                    <input type="email" class="form-control" id="email" required placeholder="votre@email.com">
+                </div>
+
+                <div class="mb-3 password-container">
+                    <label for="password" class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control" id="password" required placeholder="••••••••">
+                    <i class="fas fa-eye password-toggle" id="togglePassword"></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="remember">
+                        <label class="form-check-label" for="remember">Se souvenir de moi</label>
+                    </div>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-auth">Se connecter</button>
+
+                <div class="social-login">
+                    <p>Ou connectez-vous avec</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-apple"></i></a>
+                    </div>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Pas encore membre? <a href="inscription.html">Créez un compte</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Footer optionnel -->
+<footer class="bg-light text-center py-4">
+    <div class="container">
+        <p class="mb-0 small text-muted">&copy; 2023 [Nom du Salon]. Tous droits réservés.</p>
+    </div>
+</footer>
+{% endblock  %}
+    
