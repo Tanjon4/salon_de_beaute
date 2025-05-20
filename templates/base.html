@@ -17,74 +17,8 @@
 </head>
 <body>
     {% block body %}
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-beauty">
-        <div class="container">
-            <a class="navbar-brand" href="">
-                <img src="{% static 'images/logo.png' %}" alt="Beauté Salon" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Contact</a>
-                    </li>
-                    
-                    {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Équipe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Contact</a>
-                        </li>
-                    {% endif %}
-                </ul>
-                
-                <div class="d-flex align-items-center">
-                    {% if user.is_authenticated %}
-                        <div class="dropdown">
-                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if user.profile.photo %}
-                                    <img src="" alt="Photo profil" width="32" height="32" class="rounded-circle me-2">
-                                {% else %}
-                                    <div class="avatar-placeholder rounded-circle me-2">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                {% endif %}
-                                <span>{{ user.get_full_name|default:user.username }}</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
-                                <li><a class="dropdown-item" href="">Profil</a></li>
-                                <li><a class="dropdown-item" href="">Mes rendez-vous</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="">Déconnexion</a></li>
-                            </ul>
-                        </div>
-                        
-                        <a href="" class="btn btn-primary ms-3">
-                            Prendre un rendez-vous
-                        </a>
-                    {% else %}
-                        <a href="" class="btn btn-outline-primary me-2">Connexion</a>
-                        <a href="" class="btn btn-primary">S'inscrire</a>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- End navbar -->
+    {% include 'navbar.html' %}
+    
     {% endblock  %}
 
      <!-- Scripts Bootstrap -->
